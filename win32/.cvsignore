@@ -1,0 +1,11 @@
+Build
+*.bsc
+*.dbg
+*.exp
+*.ncb
+*.opt
+*.pdb
+*.plg
+*.pyd
+temp-*
+PyWinTypes*.flg
