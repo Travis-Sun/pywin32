@@ -133,6 +133,8 @@ if not "." in build_id_patch:
     build_id_patch = build_id_patch + ".0"
 pywin32_version="%d.%d.%s" % (sys.version_info[0], sys.version_info[1],
                               build_id_patch)
+pywin32_msi_version = "%d.%d.%s" % (sys.version_info[0], sys.version_info[1], build_id)
+
 print "Building pywin32", pywin32_version
 
 try:
@@ -2377,7 +2379,7 @@ cmdclass = { 'install': my_install,
            }
 
 dist = setup(name="pywin32",
-      version=str(build_id),
+      version=str(pywin32_msi_version),
       description="Python for Window Extensions",
       long_description="Python extensions for Microsoft Windows\n"
                        "Provides access to much of the Win32 API, the\n"
